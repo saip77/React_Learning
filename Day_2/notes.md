@@ -42,7 +42,7 @@ children: An array of children to add to the element
 
 #### JSX Rules
 
-1. Wrap in one parent element
+1. Wrap in one parent element either div or fragment (<> </>)
 Example:
 ```jsx
 <div>
@@ -104,4 +104,29 @@ function App() {
   );
 }
 
+```
+> Note: React passes props to functional components as an object.
+
+So, if you write:
+
+```
+function Greeting(name) {
+
+}
+```
+this is wrong, because name is treated as a string, not an object.
+
+Instead, you should write:
+```
+function Greeting({name}) {
+    return <h1>Hello, {name}!</h1>;
+}
+```
+
+OR
+
+```
+function Greeting(props) {
+    return <h1>Hello, {props.name}!</h1>;
+}
 ```
