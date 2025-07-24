@@ -25,3 +25,22 @@ function FruitList() {
 ```jsx  
 {isActive ? <h1>Hello, world!</h1> : <h2>Goodbye, world!</h2>}
 
+```
+
+#### Understanding implicit and explicit return
+
+For implicit return you use parentheses () to return JSX directly — no return keyword needed.
+
+```jsx
+const Greeting = () => (
+  <h1>Hello, world!</h1>
+);
+
+```
+For explicit return you use curly braces {} in your arrow function body and must include the return keyword.
+
+```jsx
+const Greeting = () => {
+  return <h1>Hello, world!</h1>;
+};
+```
