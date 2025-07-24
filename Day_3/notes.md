@@ -36,3 +36,31 @@ function Greeting({name = "World"}) {
 
 In this example, the Greeting component receives a prop called name. If no name prop is provided, the default value "World" is used instead.
 
+#### Understanding Component composition
+
+Component composition is a way to combine multiple components into a single component. It allows you to reuse code and create more complex UIs.
+
+```jsx
+function Header() {
+  return <h1>My App</h1>;
+}
+
+function Footer() {
+  return <footer>© 2025</footer>;
+}
+
+function MainContent() {
+  return <p>This is the main content.</p>;
+}
+
+function App() {
+  return (
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
+  );
+}
+
+```
