@@ -23,6 +23,16 @@ function Games (){
   )
 
 }
+function Clubs (){
+  const clubs = ["React", "Redux", "Node", "Express"];
+  return(
+    <>
+    {clubs.length >0 ? <ol>{clubs.map((club, index)=>{
+      return <li key ={index}>{club}</li>
+    })}</ol>:"hi"}
+    </>
+  )
+}
 
 function Sports({name, player}){
 return(
@@ -53,6 +63,8 @@ function App() {
       <br/>
       <Sports name="Cricket" player="Sachin Tendulkar" />
       <Sports name="Football" player="Ronaldo" />
+      <br/>
+      <Clubs />
     </>
   );
 }
